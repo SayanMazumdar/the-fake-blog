@@ -1,11 +1,10 @@
-import { useContext } from 'react'
 import Post from './Post'
-import { PostContext } from '../ContextProvider'
+import { usePostContext } from '../ContextProvider'
 
 
 export default function AllPosts() {
 
-  const { posts } = useContext(PostContext);
+  const { posts } = usePostContext();
   return (
     <div className='allPosts'>
       {posts.map((item) => <Post key={item.postId} post={item} />)}

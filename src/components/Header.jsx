@@ -1,10 +1,10 @@
 import Logo from './Logo'
-import { PostContext } from '../ContextProvider'
-import { useContext } from 'react'
+import { usePostContext } from '../ContextProvider'
+
 
 export default function Header() {
 
-  const { searchString, setSearchString, posts } = useContext(PostContext);
+  const { searchString, setSearchString, posts } = usePostContext();
   return (
     <div className='header'>
       <Logo />
